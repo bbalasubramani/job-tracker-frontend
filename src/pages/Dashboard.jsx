@@ -12,7 +12,7 @@ function Dashboard(){
     const navigate= useNavigate()
     async function fetchJobs(){
         const token=localStorage.getItem('token')
-        const response=await axios.get('http://localhost:3000/jobs',{
+        const response=await axios.get(`${import.meta.env.VITE_API_URL}/jobs`,{
             headers: {
                 'Authorization':'Bearer ' + token
             }
@@ -28,7 +28,7 @@ function Dashboard(){
 
     async function handleAddJob(){
         const token=localStorage.getItem('token')
-        await axios.post('http://localhost:3000/jobs',
+        await axios.post(`${import.meta.env.VITE_API_URL}/jobs`,
             {company,role,status,applied_date},
             {headers:{'Authorization':'Bearer ' + token}}
         )
@@ -37,7 +37,7 @@ function Dashboard(){
 
     async function handleDeleteJob(id){
         const token=localStorage.getItem('token')
-        await axios.delete(`http://localhost:3000/jobs/${id}`,{
+        await axios.delete(`${import.meta.env.VITE_API_URL}/jobs/${id}`,{
             headers: { 'Authorization': 'Bearer ' + token }
         })
         fetchJobs()

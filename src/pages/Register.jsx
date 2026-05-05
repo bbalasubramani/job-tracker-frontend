@@ -6,7 +6,7 @@ function Register(){
     const navigate=useNavigate()
     async function handleSubmit(e){
         e.preventDefault()
-        const response=await axios.post('http://localhost:3000/register', { username, email, password })
+        const response=await axios.post(`${import.meta.env.VITE_API_URL}/register`, { username, email, password })
         navigate('/login')
     }
 

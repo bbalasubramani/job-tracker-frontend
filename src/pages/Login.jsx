@@ -6,7 +6,7 @@ function Login(){
     const navigate=useNavigate()
     async function handleSubmit(e){
         e.preventDefault()
-        const response=await axios.post('http://localhost:3000/login', { email, password })
+        const response=await axios.post(`${import.meta.env.VITE_API_URL}/login`, { email, password })
         localStorage.setItem('token',response.data.token)
         navigate('/dashboard')
     }
