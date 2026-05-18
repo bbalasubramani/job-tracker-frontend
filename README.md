@@ -25,9 +25,9 @@ With the app, users can:
 
 ```mermaid
 flowchart LR
-    user[User Browser] --> frontend[React Frontend (Vercel)]
-    frontend --> api[Express REST API (Render)]
-    api --> db[(PostgreSQL (Supabase))]
+    user["User Browser"] --> frontend["React Frontend (Vercel)"]
+    frontend --> api["Express REST API (Render)"]
+    api --> db[("PostgreSQL (Supabase)")]
 ```
 
 ## Screenshots
