@@ -21,6 +21,15 @@ With the app, users can:
 - Remove applications that are no longer relevant.
 - Review and filter applications by their current status when supported by the connected backend/API workflow.
 
+## Architecture Overview
+
+```mermaid
+flowchart LR
+    user[User Browser] --> frontend[React Frontend (Vercel)]
+    frontend --> api[Express REST API (Render)]
+    api --> db[(PostgreSQL (Supabase))]
+```
+
 ## Screenshots
 
 > Screenshots coming soon.
