@@ -1,4 +1,3 @@
-# Job Tracker
 # Job Tracker Frontend
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
